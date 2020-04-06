@@ -1,0 +1,1893 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://ncl.ac.uk/aao"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://ncl.ac.uk/aao">
+    <Prefix name="aao" IRI="http://ncl.ac.uk/aao#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="pattern" IRI="http://www.w3id.org/ontolink/pattern.owl#"/>
+    <Import>http://www.purl.org/ontolink/tawny</Import>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">aao</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">This is Amino Acids ontology</Literal>
+    </Annotation>
+    <Declaration>
+        <AnnotationProperty IRI="#hasLongName"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tryptophan"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tyrosine"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSize"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Short"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Positive"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Negative"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Valine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LTR"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hydrophilic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hydrophobic"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#hasSingleLetterName"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Leucine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Theonine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Phenylalanine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Neutral"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AminoAcid"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Charge"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCharge"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPolarity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSideChainStructure"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasHydrophobicity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Glutamate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tiny"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Polar"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Arginine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Aspartate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PhysicoChemicalProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cysteine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SideChainStructure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Glutamine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Aliphatic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Size"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Glycine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lysine"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#hasShortName"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Large"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Small"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hydrophobicity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Polarity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Methionine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Serine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NonPolar"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Aromatic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Isoleucine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Proline"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Asparagine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Histidine"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="pattern:inpattern"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="pattern:facetvalue"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Charge"/>
+        <ObjectUnionOf>
+            <Class IRI="#Negative"/>
+            <Class IRI="#Neutral"/>
+            <Class IRI="#Positive"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Hydrophobicity"/>
+        <ObjectUnionOf>
+            <Class IRI="#Hydrophilic"/>
+            <Class IRI="#Hydrophobic"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Polarity"/>
+        <ObjectUnionOf>
+            <Class IRI="#NonPolar"/>
+            <Class IRI="#Polar"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SideChainStructure"/>
+        <ObjectUnionOf>
+            <Class IRI="#Aliphatic"/>
+            <Class IRI="#Aromatic"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Size"/>
+        <ObjectUnionOf>
+            <Class IRI="#Large"/>
+            <Class IRI="#Small"/>
+            <Class IRI="#Tiny"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Aliphatic"/>
+        <Class IRI="#SideChainStructure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Arginine"/>
+        <Class IRI="#AminoAcid"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Arginine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasCharge"/>
+            <Class IRI="#Positive"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Arginine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasHydrophobicity"/>
+            <Class IRI="#Hydrophilic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Arginine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPolarity"/>
+            <Class IRI="#Polar"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Arginine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSideChainStructure"/>
+            <Class IRI="#Aliphatic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Arginine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSize"/>
+            <Class IRI="#Large"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Aromatic"/>
+        <Class IRI="#SideChainStructure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Asparagine"/>
+        <Class IRI="#AminoAcid"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Asparagine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasCharge"/>
+            <Class IRI="#Neutral"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Asparagine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasHydrophobicity"/>
+            <Class IRI="#Hydrophilic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Asparagine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPolarity"/>
+            <Class IRI="#Polar"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Asparagine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSideChainStructure"/>
+            <Class IRI="#Aliphatic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Asparagine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSize"/>
+            <Class IRI="#Small"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Aspartate"/>
+        <Class IRI="#AminoAcid"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Aspartate"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasCharge"/>
+            <Class IRI="#Negative"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Aspartate"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasHydrophobicity"/>
+            <Class IRI="#Hydrophilic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Aspartate"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPolarity"/>
+            <Class IRI="#Polar"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Aspartate"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSideChainStructure"/>
+            <Class IRI="#Aliphatic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Aspartate"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSize"/>
+            <Class IRI="#Small"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Charge"/>
+        <Class IRI="#PhysicoChemicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cysteine"/>
+        <Class IRI="#AminoAcid"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cysteine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasCharge"/>
+            <Class IRI="#Neutral"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cysteine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasHydrophobicity"/>
+            <Class IRI="#Hydrophobic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cysteine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPolarity"/>
+            <Class IRI="#Polar"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cysteine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSideChainStructure"/>
+            <Class IRI="#Aliphatic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cysteine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSize"/>
+            <Class IRI="#Small"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Glutamate"/>
+        <Class IRI="#AminoAcid"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Glutamate"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasCharge"/>
+            <Class IRI="#Negative"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Glutamate"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasHydrophobicity"/>
+            <Class IRI="#Hydrophilic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Glutamate"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPolarity"/>
+            <Class IRI="#Polar"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Glutamate"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSideChainStructure"/>
+            <Class IRI="#Aliphatic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Glutamate"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSize"/>
+            <Class IRI="#Small"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Glutamine"/>
+        <Class IRI="#AminoAcid"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Glutamine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasCharge"/>
+            <Class IRI="#Neutral"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Glutamine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasHydrophobicity"/>
+            <Class IRI="#Hydrophilic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Glutamine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPolarity"/>
+            <Class IRI="#Polar"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Glutamine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSideChainStructure"/>
+            <Class IRI="#Aliphatic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Glutamine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSize"/>
+            <Class IRI="#Large"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Glycine"/>
+        <Class IRI="#AminoAcid"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Glycine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasCharge"/>
+            <Class IRI="#Neutral"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Glycine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasHydrophobicity"/>
+            <Class IRI="#Hydrophobic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Glycine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPolarity"/>
+            <Class IRI="#NonPolar"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Glycine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSideChainStructure"/>
+            <Class IRI="#Aliphatic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Glycine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSize"/>
+            <Class IRI="#Tiny"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Histidine"/>
+        <Class IRI="#AminoAcid"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Histidine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasCharge"/>
+            <Class IRI="#Positive"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Histidine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasHydrophobicity"/>
+            <Class IRI="#Hydrophilic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Histidine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPolarity"/>
+            <Class IRI="#Polar"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Histidine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSideChainStructure"/>
+            <Class IRI="#Aromatic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Histidine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSize"/>
+            <Class IRI="#Large"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hydrophilic"/>
+        <Class IRI="#Hydrophobicity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hydrophobic"/>
+        <Class IRI="#Hydrophobicity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hydrophobicity"/>
+        <Class IRI="#PhysicoChemicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Isoleucine"/>
+        <Class IRI="#AminoAcid"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Isoleucine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasCharge"/>
+            <Class IRI="#Neutral"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Isoleucine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasHydrophobicity"/>
+            <Class IRI="#Hydrophobic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Isoleucine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPolarity"/>
+            <Class IRI="#NonPolar"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Isoleucine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSideChainStructure"/>
+            <Class IRI="#Aliphatic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Isoleucine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSize"/>
+            <Class IRI="#Large"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Large"/>
+        <Class IRI="#Size"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Leucine"/>
+        <Class IRI="#AminoAcid"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Leucine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasCharge"/>
+            <Class IRI="#Neutral"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Leucine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasHydrophobicity"/>
+            <Class IRI="#Hydrophobic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Leucine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPolarity"/>
+            <Class IRI="#NonPolar"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Leucine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSideChainStructure"/>
+            <Class IRI="#Aliphatic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Leucine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSize"/>
+            <Class IRI="#Large"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lysine"/>
+        <Class IRI="#AminoAcid"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lysine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasCharge"/>
+            <Class IRI="#Positive"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lysine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasHydrophobicity"/>
+            <Class IRI="#Hydrophilic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lysine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPolarity"/>
+            <Class IRI="#Polar"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lysine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSideChainStructure"/>
+            <Class IRI="#Aliphatic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lysine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSize"/>
+            <Class IRI="#Large"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Methionine"/>
+        <Class IRI="#AminoAcid"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Methionine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasCharge"/>
+            <Class IRI="#Neutral"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Methionine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasHydrophobicity"/>
+            <Class IRI="#Hydrophobic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Methionine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPolarity"/>
+            <Class IRI="#NonPolar"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Methionine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSideChainStructure"/>
+            <Class IRI="#Aliphatic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Methionine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSize"/>
+            <Class IRI="#Large"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Negative"/>
+        <Class IRI="#Charge"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Neutral"/>
+        <Class IRI="#Charge"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NonPolar"/>
+        <Class IRI="#Polarity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Phenylalanine"/>
+        <Class IRI="#AminoAcid"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Phenylalanine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasCharge"/>
+            <Class IRI="#Neutral"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Phenylalanine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasHydrophobicity"/>
+            <Class IRI="#Hydrophobic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Phenylalanine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPolarity"/>
+            <Class IRI="#NonPolar"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Phenylalanine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSideChainStructure"/>
+            <Class IRI="#Aromatic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Phenylalanine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSize"/>
+            <Class IRI="#Large"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Polar"/>
+        <Class IRI="#Polarity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Polarity"/>
+        <Class IRI="#PhysicoChemicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Positive"/>
+        <Class IRI="#Charge"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Proline"/>
+        <Class IRI="#AminoAcid"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Proline"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasCharge"/>
+            <Class IRI="#Neutral"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Proline"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasHydrophobicity"/>
+            <Class IRI="#Hydrophobic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Proline"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPolarity"/>
+            <Class IRI="#NonPolar"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Proline"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSideChainStructure"/>
+            <Class IRI="#Aliphatic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Proline"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSize"/>
+            <Class IRI="#Small"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Serine"/>
+        <Class IRI="#AminoAcid"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Serine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasCharge"/>
+            <Class IRI="#Neutral"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Serine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasHydrophobicity"/>
+            <Class IRI="#Hydrophilic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Serine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPolarity"/>
+            <Class IRI="#Polar"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Serine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSideChainStructure"/>
+            <Class IRI="#Aliphatic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Serine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSize"/>
+            <Class IRI="#Tiny"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SideChainStructure"/>
+        <Class IRI="#PhysicoChemicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Size"/>
+        <Class IRI="#PhysicoChemicalProperty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Small"/>
+        <Class IRI="#Size"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Theonine"/>
+        <Class IRI="#AminoAcid"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Theonine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasCharge"/>
+            <Class IRI="#Neutral"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Theonine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasHydrophobicity"/>
+            <Class IRI="#Hydrophilic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Theonine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPolarity"/>
+            <Class IRI="#Polar"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Theonine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSideChainStructure"/>
+            <Class IRI="#Aliphatic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Theonine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSize"/>
+            <Class IRI="#Tiny"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tiny"/>
+        <Class IRI="#Size"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tryptophan"/>
+        <Class IRI="#AminoAcid"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tryptophan"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasCharge"/>
+            <Class IRI="#Neutral"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tryptophan"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasHydrophobicity"/>
+            <Class IRI="#Hydrophobic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tryptophan"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPolarity"/>
+            <Class IRI="#NonPolar"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tryptophan"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSideChainStructure"/>
+            <Class IRI="#Aromatic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tryptophan"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSize"/>
+            <Class IRI="#Large"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tyrosine"/>
+        <Class IRI="#AminoAcid"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tyrosine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasCharge"/>
+            <Class IRI="#Neutral"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tyrosine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasHydrophobicity"/>
+            <Class IRI="#Hydrophobic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tyrosine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPolarity"/>
+            <Class IRI="#Polar"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tyrosine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSideChainStructure"/>
+            <Class IRI="#Aromatic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tyrosine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSize"/>
+            <Class IRI="#Large"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Valine"/>
+        <Class IRI="#AminoAcid"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Valine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasCharge"/>
+            <Class IRI="#Neutral"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Valine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasHydrophobicity"/>
+            <Class IRI="#Hydrophobic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Valine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPolarity"/>
+            <Class IRI="#NonPolar"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Valine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSideChainStructure"/>
+            <Class IRI="#Aliphatic"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Valine"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSize"/>
+            <Class IRI="#Small"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Aliphatic"/>
+        <Class IRI="#Aromatic"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Hydrophilic"/>
+        <Class IRI="#Hydrophobic"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Large"/>
+        <Class IRI="#Small"/>
+        <Class IRI="#Tiny"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Negative"/>
+        <Class IRI="#Neutral"/>
+        <Class IRI="#Positive"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#NonPolar"/>
+        <Class IRI="#Polar"/>
+    </DisjointClasses>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasCharge"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasHydrophobicity"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasPolarity"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasSideChainStructure"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasSize"/>
+    </FunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCharge"/>
+        <Class IRI="#PhysicoChemicalProperty"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasHydrophobicity"/>
+        <Class IRI="#AminoAcid"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasPolarity"/>
+        <Class IRI="#PhysicoChemicalProperty"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSideChainStructure"/>
+        <Class IRI="#PhysicoChemicalProperty"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSize"/>
+        <Class IRI="#PhysicoChemicalProperty"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCharge"/>
+        <Class IRI="#Charge"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasHydrophobicity"/>
+        <Class IRI="#Hydrophobicity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasPolarity"/>
+        <Class IRI="#Polarity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSideChainStructure"/>
+        <Class IRI="#SideChainStructure"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSize"/>
+        <Class IRI="#Size"/>
+    </ObjectPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <IRI>#Aliphatic</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Aliphatic</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="pattern:facetvalue"/>
+        <IRI>#Aliphatic</IRI>
+        <IRI>#hasSideChainStructure</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="pattern:inpattern"/>
+        <IRI>#Aliphatic</IRI>
+        <AnonymousIndividual nodeID="_:genid5"/>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <IRI>#AminoAcid</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">AminoAcid</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasLongName"/>
+        <IRI>#Arginine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Arginine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasShortName"/>
+        <IRI>#Arginine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Arg</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasSingleLetterName"/>
+        <IRI>#Arginine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">R</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <IRI>#Arginine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Arginine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Arginine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Arginine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <IRI>#Aromatic</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Aromatic</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="pattern:facetvalue"/>
+        <IRI>#Aromatic</IRI>
+        <IRI>#hasSideChainStructure</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="pattern:inpattern"/>
+        <IRI>#Aromatic</IRI>
+        <AnonymousIndividual nodeID="_:genid5"/>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasLongName"/>
+        <IRI>#Asparagine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Asparagine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasShortName"/>
+        <IRI>#Asparagine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Asn</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasSingleLetterName"/>
+        <IRI>#Asparagine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">N</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <IRI>#Asparagine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Asparagine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Asparagine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Asparagine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasLongName"/>
+        <IRI>#Aspartate</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Aspartate</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasShortName"/>
+        <IRI>#Aspartate</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Asp</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasSingleLetterName"/>
+        <IRI>#Aspartate</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">D</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <IRI>#Aspartate</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Aspartate</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Aspartate</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Aspartate</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <IRI>#Charge</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Charge</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="pattern:inpattern"/>
+        <IRI>#Charge</IRI>
+        <AnonymousIndividual nodeID="_:genid2"/>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasLongName"/>
+        <IRI>#Cysteine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cysteine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasShortName"/>
+        <IRI>#Cysteine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cys</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasSingleLetterName"/>
+        <IRI>#Cysteine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">C</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <IRI>#Cysteine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cysteine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Cysteine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Cysteine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasLongName"/>
+        <IRI>#Glutamate</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Glutamate</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasShortName"/>
+        <IRI>#Glutamate</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Glu</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasSingleLetterName"/>
+        <IRI>#Glutamate</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">E</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <IRI>#Glutamate</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Glutamate</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Glutamate</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Glutamate</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasLongName"/>
+        <IRI>#Glutamine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Glutamine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasShortName"/>
+        <IRI>#Glutamine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Gln</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasSingleLetterName"/>
+        <IRI>#Glutamine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Q</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <IRI>#Glutamine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Glutamine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Glutamine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Glutamine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasLongName"/>
+        <IRI>#Glycine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Glycine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasShortName"/>
+        <IRI>#Glycine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Gly</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasSingleLetterName"/>
+        <IRI>#Glycine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">G</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <IRI>#Glycine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Glycine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Glycine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Glycine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasLongName"/>
+        <IRI>#Histidine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Histidine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasShortName"/>
+        <IRI>#Histidine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">His</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasSingleLetterName"/>
+        <IRI>#Histidine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">H</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <IRI>#Histidine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Histidine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Histidine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Histidine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <IRI>#Hydrophilic</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Hydrophilic</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="pattern:facetvalue"/>
+        <IRI>#Hydrophilic</IRI>
+        <IRI>#hasHydrophobicity</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="pattern:inpattern"/>
+        <IRI>#Hydrophilic</IRI>
+        <AnonymousIndividual nodeID="_:genid1"/>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <IRI>#Hydrophobic</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Hydrophobic</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="pattern:facetvalue"/>
+        <IRI>#Hydrophobic</IRI>
+        <IRI>#hasHydrophobicity</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="pattern:inpattern"/>
+        <IRI>#Hydrophobic</IRI>
+        <AnonymousIndividual nodeID="_:genid1"/>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <IRI>#Hydrophobicity</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Hydrophobicity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="pattern:inpattern"/>
+        <IRI>#Hydrophobicity</IRI>
+        <AnonymousIndividual nodeID="_:genid1"/>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasLongName"/>
+        <IRI>#Isoleucine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Isoleucine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasShortName"/>
+        <IRI>#Isoleucine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasSingleLetterName"/>
+        <IRI>#Isoleucine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">I</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <IRI>#Isoleucine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Isoleucine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Isoleucine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Isoleucine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <IRI>#LTR</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">LTR</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <IRI>#Large</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Large</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="pattern:facetvalue"/>
+        <IRI>#Large</IRI>
+        <IRI>#hasSize</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="pattern:inpattern"/>
+        <IRI>#Large</IRI>
+        <AnonymousIndividual nodeID="_:genid3"/>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasLongName"/>
+        <IRI>#Leucine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Leucine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasShortName"/>
+        <IRI>#Leucine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Leu</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasSingleLetterName"/>
+        <IRI>#Leucine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">L</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <IRI>#Leucine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Leucine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Leucine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Leucine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasLongName"/>
+        <IRI>#Lysine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Lysine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasShortName"/>
+        <IRI>#Lysine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Lys</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasSingleLetterName"/>
+        <IRI>#Lysine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">K</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <IRI>#Lysine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Lysine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Lysine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Lysine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasLongName"/>
+        <IRI>#Methionine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Methionine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasShortName"/>
+        <IRI>#Methionine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Met</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasSingleLetterName"/>
+        <IRI>#Methionine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">M</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <IRI>#Methionine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Methionine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Methionine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Methionine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <IRI>#Negative</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Negative</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="pattern:facetvalue"/>
+        <IRI>#Negative</IRI>
+        <IRI>#hasCharge</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="pattern:inpattern"/>
+        <IRI>#Negative</IRI>
+        <AnonymousIndividual nodeID="_:genid2"/>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <IRI>#Neutral</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Neutral</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="pattern:facetvalue"/>
+        <IRI>#Neutral</IRI>
+        <IRI>#hasCharge</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="pattern:inpattern"/>
+        <IRI>#Neutral</IRI>
+        <AnonymousIndividual nodeID="_:genid2"/>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <IRI>#NonPolar</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">NonPolar</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="pattern:facetvalue"/>
+        <IRI>#NonPolar</IRI>
+        <IRI>#hasPolarity</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="pattern:inpattern"/>
+        <IRI>#NonPolar</IRI>
+        <AnonymousIndividual nodeID="_:genid4"/>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasLongName"/>
+        <IRI>#Phenylalanine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Phenylalanine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasShortName"/>
+        <IRI>#Phenylalanine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Phe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasSingleLetterName"/>
+        <IRI>#Phenylalanine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">F</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <IRI>#Phenylalanine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Phenylalanine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Phenylalanine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Phenylalanine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <IRI>#PhysicoChemicalProperty</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">PhysicoChemicalProperty</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <IRI>#Polar</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Polar</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="pattern:facetvalue"/>
+        <IRI>#Polar</IRI>
+        <IRI>#hasPolarity</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="pattern:inpattern"/>
+        <IRI>#Polar</IRI>
+        <AnonymousIndividual nodeID="_:genid4"/>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <IRI>#Polarity</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Polarity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="pattern:inpattern"/>
+        <IRI>#Polarity</IRI>
+        <AnonymousIndividual nodeID="_:genid4"/>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <IRI>#Positive</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Positive</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="pattern:facetvalue"/>
+        <IRI>#Positive</IRI>
+        <IRI>#hasCharge</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="pattern:inpattern"/>
+        <IRI>#Positive</IRI>
+        <AnonymousIndividual nodeID="_:genid2"/>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasLongName"/>
+        <IRI>#Proline</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Proline</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasShortName"/>
+        <IRI>#Proline</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Pro</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasSingleLetterName"/>
+        <IRI>#Proline</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">P</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <IRI>#Proline</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Proline</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Proline</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Proline</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasLongName"/>
+        <IRI>#Serine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Serine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasShortName"/>
+        <IRI>#Serine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ser</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasSingleLetterName"/>
+        <IRI>#Serine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">S</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <IRI>#Serine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Serine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Serine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Serine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <IRI>#Short</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Short</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <IRI>#SideChainStructure</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">SideChainStructure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="pattern:inpattern"/>
+        <IRI>#SideChainStructure</IRI>
+        <AnonymousIndividual nodeID="_:genid5"/>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <IRI>#Size</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Size</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="pattern:inpattern"/>
+        <IRI>#Size</IRI>
+        <AnonymousIndividual nodeID="_:genid3"/>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <IRI>#Small</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Small</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="pattern:facetvalue"/>
+        <IRI>#Small</IRI>
+        <IRI>#hasSize</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="pattern:inpattern"/>
+        <IRI>#Small</IRI>
+        <AnonymousIndividual nodeID="_:genid3"/>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasLongName"/>
+        <IRI>#Theonine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Theonine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasShortName"/>
+        <IRI>#Theonine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Thr</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasSingleLetterName"/>
+        <IRI>#Theonine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">T</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <IRI>#Theonine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Theonine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Theonine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Theonine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <IRI>#Tiny</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tiny</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="pattern:facetvalue"/>
+        <IRI>#Tiny</IRI>
+        <IRI>#hasSize</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="pattern:inpattern"/>
+        <IRI>#Tiny</IRI>
+        <AnonymousIndividual nodeID="_:genid3"/>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasLongName"/>
+        <IRI>#Tryptophan</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tryptophan</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasShortName"/>
+        <IRI>#Tryptophan</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Trp</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasSingleLetterName"/>
+        <IRI>#Tryptophan</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">W</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <IRI>#Tryptophan</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tryptophan</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Tryptophan</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tryptophan</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasLongName"/>
+        <IRI>#Tyrosine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tyrosine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasShortName"/>
+        <IRI>#Tyrosine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Try</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasSingleLetterName"/>
+        <IRI>#Tyrosine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Y</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <IRI>#Tyrosine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tyrosine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Tyrosine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Tyrosine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasLongName"/>
+        <IRI>#Valine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Valine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasShortName"/>
+        <IRI>#Valine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Val</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#hasSingleLetterName"/>
+        <IRI>#Valine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">V</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <IRI>#Valine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Valine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Valine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Valine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <IRI>#hasCharge</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasCharge</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="pattern:inpattern"/>
+        <IRI>#hasCharge</IRI>
+        <AnonymousIndividual nodeID="_:genid2"/>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <IRI>#hasHydrophobicity</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasHydrophobicity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="pattern:inpattern"/>
+        <IRI>#hasHydrophobicity</IRI>
+        <AnonymousIndividual nodeID="_:genid1"/>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <IRI>#hasLongName</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasLongName</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <IRI>#hasPolarity</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasPolarity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="pattern:inpattern"/>
+        <IRI>#hasPolarity</IRI>
+        <AnonymousIndividual nodeID="_:genid4"/>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <IRI>#hasShortName</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasShortName</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <IRI>#hasSideChainStructure</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasSideChainStructure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="pattern:inpattern"/>
+        <IRI>#hasSideChainStructure</IRI>
+        <AnonymousIndividual nodeID="_:genid5"/>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <IRI>#hasSingleLetterName</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasSingleLetterName</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.purl.org/ontolink/tawny#name"/>
+        <IRI>#hasSize</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasSize</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="pattern:inpattern"/>
+        <IRI>#hasSize</IRI>
+        <AnonymousIndividual nodeID="_:genid3"/>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

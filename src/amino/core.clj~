@@ -1,0 +1,11 @@
+(ns amino.core)
+
+;; (defn -main [& args]
+;;   (with-ontology pizzaontology
+;;     (save-ontology "pizza.rdf" :rdf)
+;;     (save-ontology "pizza.owl" :owl))
+
+(defn foo
+  "I don't do a whole lot."
+  [x]
+  (println x "Hello, World!"))

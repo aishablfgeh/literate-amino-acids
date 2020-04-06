@@ -1,0 +1,214 @@
+;; This is Amino Acid ontology created using an Excel spreadsheet as a
+;; source of information for the ontology values.
+;; Author Aisha Blfgeh Newcastle University
+;; Purpose: demonstrating ontology workflow using Excel sheet
+;; UKON 2018 at Keele University
+
+(ns amino.aao
+  (:use [tawny.owl]
+        [tawny.pattern]
+        [tawny.repl]
+        [tawny.reasoner]
+        [dk.ative.docjure.spreadsheet])
+  (:require [clojure.string :as str]
+            [tawny.protocol :as p])
+  (:import [java.net URLEncoder]))
+
+(defn column-inf
+  "Reads column's values and save them in a set to remove redundancy
+  SHEET - sheet information.
+  COL - column number starting from one."
+  [sheet col]
+  (case col
+    1 (distinct(flatten
+       (seq (sorted-set
+         (map vals (select-columns {:A :aminoacid} sheet))))))
+    2 (distinct(flatten
+       (seq (sorted-set
+         (map vals (select-columns {:B :short} sheet))))))
+    3 (distinct(flatten
+       (seq (sorted-set
+         (map vals (select-columns {:C :ltr} sheet))))))
+    4 (distinct(flatten
+       (seq (sorted-set
+         (map vals (select-columns {:D :hydrophobicity} sheet))))))
+    5 (distinct(flatten
+       (seq (sorted-set
+         (map vals (select-columns {:E :charge} sheet))))))
+    6 (distinct(flatten
+       (seq (sorted-set
+         (map vals (select-columns {:F :size} sheet))))))
+    7 (distinct(flatten
+       (seq (sorted-set
+         (map vals (select-columns {:G :polarity} sheet))))))
+    8 (distinct(flatten
+       (seq (sorted-set
+         (map vals (select-columns {:H :sidechainstructure} sheet))))))))
+
+(defn row-inf
+  "Extract and save one row information into one lazy sequence.
+  SHEET - is the sheet name.
+  ROW -   is row number."
+  [sheet row]
+  (map #(and %
+             (str/replace (str/trim %) #"\s+" "-"))
+       (map read-cell
+            (cell-seq (take 1 (drop row (row-seq sheet)))))))
+
+(defn create-class
+  "Create one class using a name in a string format.
+  NAME - name of the class as string."
+  [name]
+  (intern-owl-string name (owl-class name)))
+
+(defn create-classes
+  "Create classes using a sequence of names (strings).
+  NAMES - strings sequence of names of the classes."
+  [names]
+  (doall
+   (map create-class names)))
+
+(defn create-sub-classes
+  "Define subclasses giving super class.
+  SUPER - the super class
+  ARGS - subclasses in a list"
+  [super & args]
+  ;; (tawny.pattern/value-partition super args)
+  ;; need to remove super class name before?????
+  (as-subclasses super args))
+
+;; save workbook in a variable and sheet1 as well
+(def workbook (load-workbook "AminoAcids.xlsx"))
+(def sheet (select-sheet "AminoAcids" workbook))
+(def test-sheet (select-sheet "TestAminoAcids" workbook))
+
+(defontology aao
+  :comment "This is Amino Acids ontology"
+  :iri "http://ncl.ac.uk/aao")
+
+(defclass PhysicoChemicalProperty)
+
+(defmacro defaapartition [& body]
+  '(tawny.pattern/value-partition
+     ~@body :super PhysicoChemicalProperty
+     :domain AminoAcid))
+
+;; (def charges-str (column-inf sheet 5))
+;; (def sizes-str (column-inf sheet 6))
+;; (def polarities-str (column-inf sheet 7))
+;; (tawny.pattern/value-partition (first charges-str) (rest charges-str))
+;; (tawny.pattern/value-partition (first polarities-str) (rest polarities-str))
+
+;; first row of the sheet used to define the classes
+(def classes (row-inf sheet 0))
+(create-classes classes)
+
+(refine Hydrophobicity
+        :super PhysicoChemicalProperty)
+(refine Charge
+        :super PhysicoChemicalProperty)
+(refine Size
+        :super PhysicoChemicalProperty)
+(refine Polarity
+        :super PhysicoChemicalProperty)
+(refine SideChainStructure
+        :super PhysicoChemicalProperty)
+
+;; define value partitions for the last five columns in the sheet
+(doall
+ (for [r (range 4 9)]
+  (let [x (column-inf sheet r)]
+    (tawny.pattern/value-partition (first x) (rest x)))))
+
+;; First and second examples of the spreadsheet rows
+;; (def example1 (row-inf sheet 1))
+;; (def example11 (row-inf sheet 1))
+;; (def example2 (row-inf sheet 2))
+
+;; variables to be used in creating subclasses for each class
+;; (def hydrophobicities (create-classes (column-inf sheet 4)))
+;; (def charges (create-classes (column-inf sheet 5)))
+;; (def sizes (create-classes (column-inf sheet 6)))
+;; (def polarities (create-classes (column-inf sheet 7)))
+;; (def side-chains (create-classes (column-inf sheet 8)))
+
+;(tawny.pattern/value-partition Charge (column-inf sheet 5))
+
+; (create-classes classes)
+
+(defoproperty hasHydrophobicity
+  :domain AminoAcid
+  :range Hydrophobicity
+  :characteristic
+  :functional)
+
+(defoproperty hasCharge
+  :domain PhysicoChemicalProperty
+  :range Charge)
+(defoproperty hasPolarity
+  :domain PhysicoChemicalProperty
+  :range Polarity)
+(defoproperty hasSize
+  :domain PhysicoChemicalProperty
+  :range Size)
+(defoproperty hasSideChainStructure
+  :domain PhysicoChemicalProperty
+  :range SideChainStructure)
+
+;; annotation properties
+(defaproperty hasLongName)
+(defaproperty hasShortName)
+(defaproperty hasSingleLetterName)
+
+;; create subclasses for a giving class using the column info.
+;; (create-sub-classes Charge charges)
+;; (create-sub-classes Hydrophobicity hydrophobicities)
+;; (create-sub-classes Size sizes)
+;; (create-sub-classes Polarity polarities)
+;; (create-sub-classes SideChainStructure side-chains)
+
+;; (Def ex1 (map intern-owl-string example1
+;;      (map owl-class example1)))
+
+(defn amino-acid
+  "Define new amino acid based on the row information for the Excel spreadsheet.
+  EXAMPLES - list of the amino acid information as strings extracted
+  form the spreadsheeet"
+  [examples]
+  (let [aa (owl-class (first examples)
+                    :super AminoAcid
+                    (owl-some hasCharge
+                              (entity-for-string aao (nth examples 4)))
+                    (owl-some hasHydrophobicity
+                              (entity-for-string aao(nth examples 3)))
+                    (owl-some hasPolarity
+                              (entity-for-string aao (nth examples 6)))
+                    (owl-some hasSideChainStructure
+                              (entity-for-string aao (nth examples 7)))
+                    (owl-some hasSize
+                              (entity-for-string aao (nth examples 5)))
+                    :label (first examples)
+                    :annotation
+                    (annotation hasLongName (nth examples 0))
+                    (annotation hasShortName (nth examples 1))
+                    (annotation hasSingleLetterName (nth examples 2))
+                    )
+        ]
+  (map ->Named
+       examples (repeat aa))))
+
+;; all amino acids from the excel sheet
+(doall
+ (map amino-acid (for [r (range 1 20)]
+                     (row-inf sheet r))))
+
+
+(reasoner-factory :hermit)
+(save-ontology "aao.owl" :owl)
+
+;; (let [r (select-columns {:a :A} sheet)]
+;;   (map vals r))
+
+;; (map read-cell (cell-seq sheet))
+
+;; (set (map vals (select-columns {:F :fff} sheet))) ;#{("Large") ("Tiny") ("Small") ("Size")}
